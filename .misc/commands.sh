@@ -22,4 +22,12 @@ kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/st
 
 # get ArgoCD password
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo
+kubectl port-forward svc/argocd-server -n argocd 8080:443
 
+
+
+kubectl port-forward -n demo svc/demo-api 8088:80 
+
+curl localhost:8088
+wget -O /tmp/g.png https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png
+curl -F 'image=@/tmp/g.png' localhost:8088/img/
