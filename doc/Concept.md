@@ -29,7 +29,7 @@ The following table compares the three tools based on key features, advantages, 
 - **k3d**: Experimental support requires Podman v4.0+ with Docker API compatibility enabled. Rootless mode is not fully supported, and functionality may be inconsistent ([k3d with Podman](https://k3d.io/usage/advanced/podman/)).
 
 ## Demonstration
-[To be added later]
+[![asciicast](https://asciinema.org/a/FHu2SZ974vdETo9GxSOVDgyEl.svg)](https://asciinema.org/a/FHu2SZ974vdETo9GxSOVDgyEl)
 
 ## Conclusion and Recommendation
 Kind is the most suitable tool for AsciiArtify’s local development needs. It offers robust Podman support, especially on Linux and macOS, and supports multi-node clusters, which are valuable for testing complex application scenarios. Its low resource usage, fast startup time, and integration with CI/CD pipelines make it ideal for the startup’s PoC. However, on Windows, the requirement for rootful mode may be a drawback. By adopting Kind with Podman, AsciiArtify can achieve a lightweight, efficient, and Docker-independent local Kubernetes development environment.
